@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<head>
-<link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="homeScript.js"></script>
+<head>
+  <link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="resources/js/homeScript.js"></script>
+  
 </head>
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active">Home</a>
@@ -45,10 +46,19 @@
             </div>
             <div class="row">
               <div class="col-100">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" value="password" name="password" placeholder="Password" required>
+                
+                <!-- works, but have to link external js page-->
+                
+                <input type="checkbox" onclick="passwordToggle()">Show Password<br>
+                Must have atleast 8 characters<br>
+                Use atleast one number, letter, and special character <br>
+                
+                
               </div>
               <div class="col-100">
                 <input type="password" id="confirm" name="password" placeholder="Confirm" required>
+                 <input type="checkbox" onclick="confirmToggle()">Show Password<br>
               </div>
             </div>
             <div class="row">
@@ -105,3 +115,4 @@
 
   </form>
 </div>
+
