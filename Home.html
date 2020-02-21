@@ -4,6 +4,15 @@
   <link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="resources/js/homeScript.js"></script>
+<style>
+body {
+	background-image: url("resources/images/volunteerbg.jpg");
+	background-repeat: no-repeat;
+  background-size: auto;
+}
+
+</style>
+
 
 </head>
 <div class="topnav" id="myTopnav">
@@ -23,8 +32,6 @@
   </a>
 </div>
 -->
-
-
 
   <!-- Sign up -->
   <div id="id01" class="modal">
@@ -101,13 +108,16 @@
             <input type="text" id="emailcheck" name="email" placeholder="Email" required>
           </div>
           <div class="col-100">
-            <input type="text" id="passwordcheck" name="password" placeholder="Password" required>
+            <input type="password" id="passwordcheck" name="password" placeholder="Password" required>
           </div>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <!-- Remember checkbox          
+           <div id="id1">
+           <input type="checkbox" checked="checked" name="remember" > Remember me</div>
+          -->
+          <div id="id2">
+            <span class="psw">Forgot <a href="#">password?</a></span> </div>
           <div class="row">
+
             <input type="submit" value="Submit">
           </div>
         </form>
@@ -146,17 +156,17 @@
           <div class="col-100">
             <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
           </div>
-          Volunteer Policy <br>
+          <h2 style="padding-left: 5px">Volunteer Policy</h2>
           <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
-          <label for="male">Just show up</label><br>
+          <label for="radio1">Just show up</label><br>
           <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
-          <label for="female">Contact Organizer before arriving</label><br>
-          Skills needed (Select all that apply) <br>
+          <label for="radio2">Contact Organizer before arriving</label><br>
+          <h2 style="padding-left: 5px">Skills needed (Select all that apply) </h2>
 
 
 
           <input type="checkbox" id="skill1" name="skill1" value="Childcare">
-          <label for="skill1">Childcaren</label><br>
+          <label for="skill1">Childcare</label><br>
           <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
           <label for="skill3">Cleaning</label><br>
           <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
@@ -198,7 +208,9 @@
 
 
 
-          Materials <br>
+          <h2>
+
+            Materials </h2>
           <div class="col-100">
             <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
           </div>
@@ -206,12 +218,12 @@
             <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items volunteer should bring">
           </div>
 
-          Number of volunteer needed <br>
+          <h2>Number of volunteer needed</h2>
           <div class="col-100">
             <input type="number" id="quantity" name="quantity">
           </div>
 
-          Contact info <br>
+          <h2> Contact info </h2>
           <div class="col-100">
             <input type="text" id="Name" name="Name" placeholder="Name">
           </div>
@@ -235,16 +247,12 @@
 
 
 
-<img src="resources/images/volunteerbg.jpg" atl="colunteerbg" style="background-repeat:repeat">
 
- 
 <div class="searchwrap">
-   <div class="search">
-      <input type="textsearch" class="searchTerm" placeholder="Search for Keyword or Location">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
+  <div class="search">
+    <input type="textsearch" class="searchTerm" placeholder="Search for Keyword or Location">
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
 </div>
-
-
