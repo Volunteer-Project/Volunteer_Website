@@ -295,3 +295,14 @@ input[type=submit]:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+.title{
+	font-size: 40px;
+	color: white;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
