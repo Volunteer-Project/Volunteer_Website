@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Navigation Bar */
+.topnav {
+  overflow: hidden;
+  background-color: #2C6BFF;
+}
+
+
+/*Navigation Bar "Home" */
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+/*Navigation Bar "Home" hover */
+.topnav a:hover {
+  background-color: #5588FF;
+  color: black;
+}
+
+
+/*Navigation Bar "Menu Icon" */
+.topnav .icon {
+  display: none;
+}
+
+/*Navigation Bar "Menu Icon" appears when below 600px */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  /*Navigation Bar "Menu Icon" */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+/* Set a style for all buttons "Login Button" & "Sign Up" */
+modalbutton {
+  background-color: #0143DB;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+modalbutton:hover {
+  opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  background-color: #2C6BFF;
+}
+
+.container {
+  padding: 16px;
+  background-color: #2C6BFF; 
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  width: 45%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  float: right;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #5588FF;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/*Style for input fields*/
+input[type=text],
+[type=password], select, textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/*Style for submit button*/
+input[type=submit] {
+  background-color: #2C6BFF;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+input[type=submit]:hover {
+  background-color: #5588FF;
+}
+
+
+.col-50 {
+  padding: 5px;
+  max-width: 50%;
+  margin-top: 6px;
+}
+
+.col-100 {
+  padding: 5px;
+  margin-top: 6px;
+  margin-right: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.card {
+  width: 350px;
+  border-radius: 2px;
+  margin: 75px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+
+}
+
+.header {
+  height: 20px;
+  color: #fff;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+.input-wrap {
+  padding: 5px;
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #2C6BFF;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #2C6BFF;
+  background: #2C6BFF;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.searchwrap{
+  width: 30%;
+  position: absolute;
+  padding-top: 12px;
+  padding-left: 90px;
+}
+
+
+.title{
+	font-size: 40px;
+	color: white;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}

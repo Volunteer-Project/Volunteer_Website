@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="resources/css/viewproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="resources/js/homeScript.js"></script>
+<style>
+body {
+	background-color:  #019ade
+}
+
+</style>
+</head>
+<div class="topnav" id="myTopnav">
+  <a href="Home.html" class="active">Home</a>
+
+
+<div class="searchwrap">
+  <div class="search">
+    <input type="textsearch" class="searchTerm" placeholder="Search for Keyword or Location">
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
+
+
+  <modalbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;">Sign Up</modalbutton>
+  <modalbutton onclick="document.getElementById('id02').style.display='block'" style="width:auto; float: right;">Login</modalbutton>
+  <modalbutton onclick="document.getElementById('id03').style.display='block'" style="width:auto; float: right;">Post Project</modalbutton>
+<a href=account_page.html style="width:auto; float: right;">Account</a>
+  <!-- menu icon when small 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+-->
+
+  <!-- Sign up -->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <h1 style="padding-left: 5px"> Sign Up </h1>
+          <form>
+            <div class="col-100">
+              <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+            </div>
+            <div class="col-100">
+              <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+            </div>
+            <div class="row">
+              <div class="col-100">
+                <input type="text" id="email" name="email" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-100">
+                <input type="password" id="password" value="password" name="password" placeholder="Password" required>
+
+                <!-- works, but have to link external js page-->
+
+                <input type="checkbox" onclick="passwordToggle()">Show Password<br>
+                Must have atleast 8 characters<br>
+                Use atleast one number, letter, and special character <br>
+
+
+              </div>
+              <div class="col-100">
+                <input type="password" id="confirm" name="password" placeholder="Confirm" required>
+                <input type="checkbox" onclick="confirmToggle()">Show Password<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-100">
+                <textarea id="subject" name="bio" placeholder="Bio" style="height:100px; width:320px;" required></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-100">
+                <input type="text" id="group" name="group" placeholder="Affiliated group (If applicable)">
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- Login -->
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h1 style="padding-left: 5px">Login </h1>
+        <form>
+          <div class="col-100">
+            <input type="text" id="emailcheck" name="email" placeholder="Email" required>
+          </div>
+          <div class="col-100">
+            <input type="password" id="passwordcheck" name="password" placeholder="Password" required>
+          </div>
+          <!-- Remember checkbox          
+           <div id="id1">
+           <input type="checkbox" checked="checked" name="remember" > Remember me</div>
+          -->
+          <div id="id2">
+            <span class="psw">Forgot <a href="#">password?</a></span> </div>
+          <div class="row">
+
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Post Project -->
+<div id="id03" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h1 style="padding-left: 5px">Post Project </h1>
+        <form>
+
+          <div class="col-100">
+            <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
+          </div>
+          <div class="col-100">
+            <input type="text" id="Description" name="Description" placeholder="Description" required>
+          </div>
+          <div class="col-100">
+            <input type="text" id="Address" name="Address" placeholder="Address" required>
+          </div>
+          <div class="col-100">
+            <input type="text" id="location" name="location" placeholder="Name of Facility or Location">
+          </div>
+          <div class="col-100">
+            <input type="text" id="MeetingPoint" name="MeetingPoint" placeholder="Meeting Point">
+          </div>
+          Date widget
+          <div class="col-100">
+            <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
+          </div>
+          <h2 style="padding-left: 5px">Volunteer Policy</h2>
+          <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
+          <label for="radio1">Just show up</label><br>
+          <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
+          <label for="radio2">Contact Organizer before arriving</label><br>
+          <h2 style="padding-left: 5px">Skills needed (Select all that apply) </h2>
+
+
+
+          <input type="checkbox" id="skill1" name="skill1" value="Childcare">
+          <label for="skill1">Childcare</label><br>
+          <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
+          <label for="skill3">Cleaning</label><br>
+          <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
+          <label for="skill3">Clinical work</label><br>
+          <input type="checkbox" id="skill4" name="skill1" value="Demolition">
+          <label for="skill4">Demolition</label><br>
+          <input type="checkbox" id="skill5" name="skill1" value="Drywall">
+          <label for="skill5">Drywall</label><br>
+          <input type="checkbox" id="skill6" name="skill1" value="Electrical">
+          <label for="skill6">Electrical</label><br>
+          <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
+          <label for="skill7">Equipment operation</label><br>
+          <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
+          <label for="skill8">Event preparation</label><br>
+          <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
+          <label for="skill9">Fellowship</label><br>
+          <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
+          <label for="skill10">Food preparation/Serving</label><br>
+          <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
+          <label for="skill11">Landscaping</label><br>
+          <input type="checkbox" id="skill12" name="skill1" value="Light construction">
+          <label for="skill12">Light construction</label><br>
+          <input type="checkbox" id="skill13" name="skill1" value="Masonry">
+          <label for="skill13">Masonry</label><br>
+          <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
+          <label for="skill14">Medical/Healthcare</label><br>
+          <input type="checkbox" id="skill15" name="skill1" value="Painting">
+          <label for="skill15">Painting</label><br>
+          <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
+          <label for="skill16">Pet/Wildlife</label><br>
+          <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
+          <label for="skill17">Plumbing</label><br>
+          <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
+          <label for="skill18">Stocking/Organizing</label><br>
+          <input type="checkbox" id="skill19" name="skill1" value="Transportation">
+          <label for="skill19">Transportation</label><br>
+          <input type="checkbox" id="skill20" name="skill1" value="Other">
+          <label for="skill20">Other</label><br>
+
+
+
+          <h2>
+
+            Materials </h2>
+          <div class="col-100">
+            <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
+          </div>
+          <div class="col-100">
+            <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items volunteer should bring">
+          </div>
+
+          <h2>Number of volunteer needed</h2>
+          <div class="col-100">
+            <input type="number" id="quantity" name="quantity">
+          </div>
+
+          <h2> Contact info </h2>
+          <div class="col-100">
+            <input type="text" id="Name" name="Name" placeholder="Name">
+          </div>
+          <div class="col-100">
+            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
+          </div>
+          <div class="col-100">
+            <input type="text" id="Organization" name="Organization" placeholder="Organization (if applicable)">
+          </div>
+          <div class="col-100">
+            <input type="text" id="OrganizationWebsite" name="OrganizationWebsite" placeholder="Organization Website(if applicable)">
+          </div>
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
