@@ -185,7 +185,7 @@ span.psw {
 }
 
 /*Style for input fields*/
-input[type=text],
+input[type=text], 
 [type=password], select, textarea {
   width: 100%;
   padding: 12px 12px;
@@ -196,7 +196,7 @@ input[type=text],
 
 /*Style for submit button*/
 input[type=submit] {
-  background-color: #2C6BFF;
+  background-color: #2C6BFF; 
   color: white;
   padding: 12px 30px;
   border: none;
@@ -207,7 +207,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #5588FF;
+  background-color: #5588FF; /*#5588FF = rgb(85, 136, 255)*/
 }
 
 
@@ -232,14 +232,12 @@ input[type=submit]:hover {
 
 
 .card {
-  width: 350px;
+  width: 500px; /*was 350px*/
   border-radius: 2px;
   margin: 75px auto;
   padding: 20px;
   background: #fff;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
-
 }
 
 .header {
@@ -287,6 +285,19 @@ input[type=submit]:hover {
   font-size: 20px;
 }
 
+#date {  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 10px;
+  color: grey;
+  text-transform: uppercase;
+  }
+
+#quantity{  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 10px;
+  color: grey;}
+
 /*Resize the wrap to see the search bar change!*/
 .searchwrap{
   width: 30%;
@@ -305,4 +316,73 @@ input[type=submit]:hover {
   top: 25%;
   left: 61%;
   transform: translate(-50%, -50%);
+}
+
+
+#textpadding{padding: 6px;}
+
+
+/* CHECKBOX / RADIO BUTTON CSS CHECKBOX / RADIO BUTTON CSS  CHECKBOX / RADIO BUTTON CSS   CHECKBOX / RADIO BUTTON CSS   CHECKBOX / RADIO BUTTON CSS */
+
+
+/*hide default styling*/
+input[type=radio]:not(old),
+input[type=checkbox]:not(old){
+  width   : 28px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+}
+
+/*positioning and unchecked styling*/
+input[type=radio]:not(old) + label,
+input[type=checkbox ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 28px;
+  line-height  : 24px;
+}
+
+/*positioning and checked styling*/
+input[type=radio]:not(old):checked + label{
+  background-position : 0 -48px;
+}
+input[type=checkbox]:not(old):checked + label{
+  background-position : 0 -24px;
+}
+/*first span, unchecked grahics*/
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background-color:  rgba(85, 136, 255,.125);
+  vertical-align   : bottom;
+}
+
+/*bullet inside radio buttons*/
+input[type=radio]:not(old):checked + label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid#DC483C;
+  border-radius    : 0.125em;
+  background       :#DC483C;
+}
+
+/*tickmark inside checkboxes*/ /*#DC483C is a more subtle red that matches the hearts in the hands*/
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  width       : 1em;
+  color       :#DC483C;
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em #DC483C;
+  font-weight : bold;
 }
