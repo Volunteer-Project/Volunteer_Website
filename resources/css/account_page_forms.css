@@ -4,8 +4,7 @@
           
           body 
               {
-                background-color: lightsteelblue;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-family: Arial, Helvetica, sans-serif;
                 font-weight: bolder;
                 color: black;
               }    
@@ -13,28 +12,6 @@
                 box-sizing: border-box;
           }
 
-         
-    
-          ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: none;
-    
-          }
-    
-          li {
-            float: left;
-          }
-    
-          li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-          }
     
           input[type=text],
           select,
@@ -49,7 +26,7 @@
     
           input[type=submit] {
             /*the perfect color match for the active tab buttons is this rgba(105, 26, 25, .87)*/
-            background-color:  rgba(105, 26, 25, .87);
+            background-color:   #0143DB;
             /*white bc small black text is hard to see on dark background*/
             color: white;   
             padding: 20px 30px;
@@ -112,7 +89,7 @@
                 body {font-family: Arial, Helvetica, sans-serif;}
 
                 #myBtn { /*the perfect color match for the active tab buttons is this rgba(105, 26, 25, .87)*/
-                  background-color:  rgba(105, 26, 25, .87);
+                  background-color:  #0143DB;
                   /*white bc small black text is hard to see on dark background*/
                   color: white;   
                   padding: 20px 30px;
@@ -123,7 +100,7 @@
                   margin-left: 7px;
                 }
                 #myBtn2 { /*the perfect color match for the active tab buttons is this rgba(105, 26, 25, .87)*/
-                  background-color:  rgba(105, 26, 25, .87);
+                  background-color: #0143DB;
                   /*white bc small black text is hard to see on dark background*/
                   color: white;   
                   padding: 20px 30px;

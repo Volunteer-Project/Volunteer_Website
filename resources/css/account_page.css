@@ -4,55 +4,222 @@
 /* blue, green, red, purple, yellow*/
           
 
-  
-
-/*TAB SECTION CSS TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS*/
-body {font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-color:rgba(255, 166, 0, 0.5);
-font-size: large;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  background-color: #019ADE;
 }
-
 
 /* Style the header */
-  header {
-    background-color:none;
-    padding: 100px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
+header {
+  background-color:red; 
+  padding: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  z-index: -1;
 }
+/*#019ADE*/
+
+/*NAV SECTION CSS*  NAV SECTION CSS NAV SECTION CSS   NAV SECTION CSS   NAV SECTION CSS   NAV SECTION CSS   NAV SECTION CSS   NAV SECTION CSS/
+
+
+  
+  /*Navigation Bar */
+  /*padding order =  top, right, left, bottom. */
+  .topnav {
+    overflow: hidden;
+    background-color:#2C6BFF;
+    font-weight: normal;
+  }
+  
+  
+  /*Navigation Bar "Home" */
+  .topnav a {
+    float: left;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+  }
+  
+  /*Navigation Bar "Home" hover */
+  .topnav a:hover {
+    background-color: #5588FF;
+    color: black;
+  }
+  
+  
+  /*Navigation Bar "Menu Icon" */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /*Navigation Bar "Menu Icon" appears when below 600px */
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+  
+    /*Navigation Bar "Menu Icon" */
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative;
+    }
+  
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+.input-wrap {
+  padding: 5px;
+}
+
+/*Style for input fields*/
+input[type=text],
+[type=password], select, textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/*Style for submit button*/
+input[type=submit] {
+  background-color: #2C6BFF;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+/*SEARCH BAR CSS    SEARCH BAR CSS    SEARCH BAR CSS */
+.searchTerm {
+  width: 100%;
+  border: 3px solid #2C6BFF;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #2C6BFF;
+  background: #2C6BFF;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.searchwrap{
+  width: 30%;
+  position: absolute;
+  padding-top: 12px;
+  padding-left: 90px;
+}
+
+
+/* Set a style for all buttons "Login Button" & "Sign Up" */
+modalbutton {
+  background-color: #0143DB;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+modalbutton:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/*TAB SECTION CSS TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS   TAB SECTION CSS*/
+
+
+/*no longer needed
+#nav ul 
+      {
+        display: inline-block;
+        list-style-type: none;
+        font-size: 17px;
+      }
+
+
+
+
+
 /* Style the tab */
+/* 5 = hover  2 = regular*/
 .tab {
 overflow: hidden;
 border: none;
-border-color:  rgba(56, 26, 2, 0.5);
-background-color: lightseagreen;
+border-color: #0143DB;
+background-color:  #0143DB;
+
 }
 
 /* Style the buttons inside the tab */
 .tab button {
 background-color: inherit;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-weight: bolder;
+font-weight: normal;
 float: left;
 border: none;
 border-color: black;
 outline: none;
 cursor: pointer;
-padding: 20px 188.81px; /*button reach to end of page*/
+padding: 20px 200px; /*button reach to end of page*/
 transition: 0.3s;
-font-size: 20px;
+font-size: 17px;
+color:white;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-background-color: rgba(105, 26, 25, .87); /*rgba(56, 26, 2, 0.5)*/
-padding: 20px 188.81px; /*button reach to end of page*/
+background-color:  #5588FF; /*rgba(56, 26, 2, 0.5)*/
+padding: 20px 209.9px; /*button reach to end of page*/
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-background-color: lightyellow; /*rgba(56, 2, 56, 0.671);*/
+background-color: lightsteelblue; /*rgba(56, 2, 56, 0.671);*/
 padding: 20px 185px; /*button reach to end of page*/
 }
 
@@ -62,14 +229,13 @@ display: none;
 padding: 6px 12px;
 border: none;
 border-top: none;
-background-color: lightyellow;
+background-color: lightsteelblue;
 }
 
 /*TRYING TO GET BUTTON NICE ON MAIN*/
 .button {
-  background-color:  rgba(105, 26, 25, .87);/*the perfect color match for the active tab buttons is this rgba(105, 26, 25, .87)*/
-  /*white bc small black text is hard to see on dark background*/
-  color: white;   
+  background-color: #0143DB;/*the perfect burgundy color match for the active tab buttons is this rgba(105, 26, 25, .87)*/
+  color: white;    /*white bc small black text is hard to see on dark background*/
   padding: 12px 30px;
   border: none;
   border-radius: 4px;
@@ -81,5 +247,8 @@ background-color: lightyellow;
 .space {margin-top: 75px; }
 
 tr.spaceUnder>td {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
+
+
+/*PROFILE PHOTO CSS   PROFILE PHOTO CSS   PROFILE PHOTO CSS   PROFILE PHOTO CSS   PROFILE PHOTO CSS   PROFILE PHOTO CSS   PROFILE PHOTO CSS*/
