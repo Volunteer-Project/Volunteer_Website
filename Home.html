@@ -1,333 +1,191 @@
 <!DOCTYPE html>
 
 <head>
+  <title>Volunteer Website Home</title>
   <link rel="stylesheet" type="text/css" href="resources/css/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="resources/js/homeScript.js"></script>
-<style>
-body {
-	background-image: url("resources/images/volunteerbg.jpg");
-	background-repeat: no-repeat;
-  background-size: auto;
-}
-
-</style>
+  <style>
+    body {
+      background-image: url("resources/images/volunteerbg.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  </style>
 </head>
+
+<!-- Top Navigation -->
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-
-
-
-
-
+  <a href="#home" class="active" style="width:auto; float: left;">Home</a>
   <modalbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;">Sign Up</modalbutton>
   <modalbutton onclick="document.getElementById('id02').style.display='block'" style="width:auto; float: right;">Login</modalbutton>
   <modalbutton onclick="document.getElementById('id03').style.display='block'" style="width:auto; float: right;">Post Project</modalbutton>
-<a href=account_page.html style="width:auto; float: right;">Account</a>
-  <!-- menu icon when small 
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+  <a href=account_page.html style="width:auto; float: right;">Account</a>
 </div>
--->
 
- <!-- Sign up -->
-  <div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php" method="post">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      </div>
-
-      <div class="container">
-        <div class="card">
-          <h1 style="padding-left: 5px"> Sign Up </h1>
-          <form>
-            <div class="col-100">
-              <input type="text" id="fname" name="firstname" placeholder="First Name" required>
-            </div>
-            <div class="col-100">
-              <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
-            </div>
-            <div class="row">
-              <div class="col-100">
-                <input type="text" id="email" name="email" placeholder="Email" required>
-              </div>
-            </div><br>
-            <div id = textpadding>Password must have at least 8 characters.<br>
-            Use at least one number, letter, and special character. </div>
-            <div class="row">
-			
-			
-              <div class="col-100">
-                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                <input type="checkbox" id = "showpassword" name="show" value = "Show Password" onclick="passwordToggle()" >
-                <label for="showpassword"><span><span></span></span>Show Password</label>
-              </div>
-			  
-              <div class="col-100">
-                <input type="password" id="confirm" name="confirm" placeholder="Confirm" required><br><br>
-                <input type="checkbox" id = "showpassword2" name="show" value = "Show Password" onclick="confirmToggle()" >
-                <label for="showpassword2"><span><span></span></span>Show Password</label>
-				
-              </div>
-            </div>
-       
-            <div class="row">
-              <div class="col-100">
-                <input type="text" id="group" name="group" placeholder="Affiliated group (If applicable)">
-              </div>
-			  		<div style="padding: 10px 10px;">
-			<p>Our Mission: We want to make a community driven platform with the goal to offer a Helping Hand to anybody who needs help. Thanks for signing up!</p>
-			</div>
-            </div><br><br>
-            <div class="row">
-              <input type="submit" value="Submit">
-            </div>
-          </form>
+<!-- Sign up -->
+<div id="id01" class="modal">
+  <form class="modal-content animate" method="post">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1 style="padding-left: 5px"> Sign Up </h1>
+      <form>
+        <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+        <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+        <input type="text" id="email" name="email" placeholder="Email" required><br>
+        <div style="padding: 10px 10px;">
+          <div>Password must have at least 8 characters.<br>
+            Use at least one number, letter, and special character. 
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input type="checkbox" id="showpassword" name="show" value="Show Password" onclick="passwordToggle()">
+        <label for="showpassword"><span><span></span></span>Show Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Confirm" required><br>
+        <input type="checkbox" id="showpassword2" name="show" value="Show Password" onclick="confirmToggle()">
+        <label for="showpassword2"><span><span></span></span>Show Password</label>
+        <input type="text" id="group" name="group" placeholder="Affiliated group (If applicable)">
+        <div style="padding: 5px 10px;">
+          <p>Our Mission: We want to make a community driven platform with the goal to offer a Helping Hand
+            to anybody who needs help. Thanks for signing up!</p>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </form>
 </div>
-
 
 <!-- Login -->
 <div id="id02" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <div class="card">
-        <h1 style="padding-left: 5px">Login </h1>
-        <form>
-          <div class="col-100">
-            <input type="text" id="emailcheck" name="email" placeholder="Email" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="passwordcheck" name="password" placeholder="Password" required><br><br>
-          </div>
-            <input type="checkbox" id = "rempassword" name="remember" value = "Remember Me"> 
-              <label for="rempassword"><span><span></span></span>Remember Me</label><br>
-          </label>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-          <div class="row">
-            <br><br><br><br>
-            <input type="submit" value="Submit">
-          </div>
-        </form>
-      </div>
+  <form class="modal-content animate" method="post">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1>Login </h1>
+      <form>
+        <input type="text" id="emailcheck" name="email" placeholder="Email" required>
+        <input type="text" id="passwordcheck" name="password" placeholder="Password" required><br>
+        <input type="checkbox" id="rempassword" name="remember" value="Remember Me">
+        <label for="rempassword"><span><span></span></span>Remember Me</label><br>
+        <span class="password"> <a href="#">Forgot password?</a></span><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </form>
 </div>
 
 <!-- Post Project -->
 <div id="id03" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container">
-      <div class="card">
-        <h1 style="padding-left: 5px">Post Your Project </h1>
-        <br>
-        <form>
-     
-          <div class="col-100">
-            <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="Description" name="Description" placeholder="Description" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="Address" name="Address" placeholder="Address" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="location" name="location" placeholder="Name of Facility or Location">
-          </div>
-          <div class="col-100">
-            <input type="text" id="MeetingPoint" name="MeetingPoint" placeholder="Meeting Point">
-          </div>
-          <div class="col-100">
-            <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
-          </div>
-          <div class="col-100">
-              <input type="date" id="date" name="date" placeholder = "date"><br><br>
-          </div>
-        
-
-
-          <div id= textpadding> Volunteer Policy </div><br>
-          <div>
-            <tr>
-              <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
-              <label for="showup"><span><span></span></span>Just show up</label><br>
-              <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
-              <label for="contacthost"><span><span></span></span>Contact organizer before arriving</label><br><br>
-            </tr>
-          </div>
-
-
-          <div id= textpadding> Skills needed (Select all that apply) </div>
-          <!--tr = table row    th = table header   td = table data cell-->
-          <table style="width:100%">
-            <tr>
-              <td> <input type="checkbox" id="skill1" name="skill1" value="Childcare">
-                <label for="skill1"><span><span></span></span>Childcare</label></td>
-              <td>  <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
-                <label for="skill11"><span><span></span></span>Landscaping</label></td>
-            </tr>
-
-            <tr>
-              <td> <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
-                <label for="skill2"><span><span></span></span>Cleaning</label><br></td>
-              <td> <input type="checkbox" id="skill12" name="skill1" value="Light construction">
-                <label for="skill12"><span><span></span></span>Light construction</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
-                <label for="skill3"><span><span></span></span>Clinical work</label><br></td>
-              <td><input type="checkbox" id="skill13" name="skill1" value="Masonry">
-                <label for="skill13"><span><span></span></span>Masonry</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill4" name="skill1" value="Demolition">
-                <label for="skill4"><span><span></span></span>Demolition</label><br></td>
-              <td>          <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
-                <label for="skill14"><span><span></span></span>Medical/Healthcare</label></td>
-            </tr>
-            <tr>
-              <td>   <input type="checkbox" id="skill5" name="skill1" value="Drywall">
-                <label for="skill5"><span><span></span></span>Drywall</label></td>
-              <td>
-                <input type="checkbox" id="skill15" name="skill1" value="Painting">
-                <label for="skill15"><span><span></span></span>Painting</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill6" name="skill1" value="Electrical">
-                <label for="skill6"><span><span></span></span>Electrical</label><br></td>
-              <td>     <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
-                <label for="skill16"><span><span></span></span>Pet/Wildlife</label></td>
-            </tr>
-            <tr>
-              <td>   <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
-                <label for="skill7"><span><span></span></span>Equipment operation</label></td>
-              <td> <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
-                <label for="skill17"><span><span></span></span>Plumbing</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
-                <label for="skill8"><span><span></span></span>Event preparation</label></td>
-              <td>         
-                <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
-                <label for="skill18"><span><span></span></span>Stocking/Organizing</label></td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
-                <label for="skill9"><span><span></span></span>Fellowship</label><br></td>
-              <td>        <input type="checkbox" id="skill19" name="skill1" value="Transportation">
-                <label for="skill19"><span><span></span></span>Transportation</label><br></td>
-            </tr>
-            <tr>
-              <td> <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
-                <label for="skill10"><span><span></span></span>Food preparation/Serving</label>
+  <form class="modal-content animate" method="post">
+    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1 style="padding-left: 5px">Post Your Project </h1>
+      <form>
+        <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
+        <input type="text" id="Description" name="Description" placeholder="Description" required>
+        <input type="text" id="Address" name="Address" placeholder="Address" required>
+        <input type="text" id="location" name="location" placeholder="Name of Facility or Location">
+        <input type="text" id="MeetingPoint" name="MeetingPoint" placeholder="Meeting Point">
+        <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
+        <input type="date" id="date" name="date" placeholder="date"><br><br>
+        <div id=textpadding> Volunteer Policy </div><br>
+        <div>
+          <tr>
+            <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
+            <label for="showup"><span><span></span></span>Just show up</label><br>
+            <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
+            <label for="contacthost"><span><span></span></span>Contact organizer before arriving</label><br><br>
+          </tr>
+        </div>
+        <div> Skills needed (Select all that apply) </div>
+        <!--tr = table row    th = table header   td = table data cell-->
+        <table style="width:100%">
+          <tr>
+            <td> <input type="checkbox" id="skill1" name="skill1" value="Childcare">
+              <label for="skill1"><span><span></span></span>Childcare</label></td>
+            <td> <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
+              <label for="skill11"><span><span></span></span>Landscaping</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
+              <label for="skill2"><span><span></span></span>Cleaning</label><br></td>
+            <td> <input type="checkbox" id="skill12" name="skill1" value="Light construction">
+              <label for="skill12"><span><span></span></span>Light construction</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
+              <label for="skill3"><span><span></span></span>Clinical work</label><br></td>
+            <td><input type="checkbox" id="skill13" name="skill1" value="Masonry">
+              <label for="skill13"><span><span></span></span>Masonry</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill4" name="skill1" value="Demolition">
+              <label for="skill4"><span><span></span></span>Demolition</label><br></td>
+            <td> <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
+              <label for="skill14"><span><span></span></span>Medical/Healthcare</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill5" name="skill1" value="Drywall">
+              <label for="skill5"><span><span></span></span>Drywall</label></td>
+            <td>
+              <input type="checkbox" id="skill15" name="skill1" value="Painting">
+              <label for="skill15"><span><span></span></span>Painting</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill6" name="skill1" value="Electrical">
+              <label for="skill6"><span><span></span></span>Electrical</label><br></td>
+            <td> <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
+              <label for="skill16"><span><span></span></span>Pet/Wildlife</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
+              <label for="skill7"><span><span></span></span>Equipment operation</label></td>
+            <td> <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
+              <label for="skill17"><span><span></span></span>Plumbing</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
+              <label for="skill8"><span><span></span></span>Event preparation</label></td>
+            <td>
+              <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
+              <label for="skill18"><span><span></span></span>Stocking/Organizing</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
+              <label for="skill9"><span><span></span></span>Fellowship</label><br></td>
+            <td> <input type="checkbox" id="skill19" name="skill1" value="Transportation">
+              <label for="skill19"><span><span></span></span>Transportation</label><br></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
+              <label for="skill10"><span><span></span></span>Food preparation/Serving</label>
             </td>
-              <td><input type="checkbox" id="skill20" name="skill1" value="Other">
-                <label for="skill20"><span><span></span></span>Other</label></td><br>
-            </tr>
-          </table>
-          <br>
-
-         
-         
-     
-          <!--original
-                <input type="checkbox" id="skill1" name="skill1" value="Childcare">
-                <label for="skill1"><span><span></span></span>Childcare</label><br>
-                <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
-                <label for="skill2"><span><span></span></span>Cleaning</label><br>
-                <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
-                <label for="skill3"><span><span></span></span>Clinical work</label><br>
-                <input type="checkbox" id="skill4" name="skill1" value="Demolition">
-                <label for="skill4"><span><span></span></span>Demolition</label><br>
-                <input type="checkbox" id="skill5" name="skill1" value="Drywall">
-                <label for="skill5"><span><span></span></span>Drywall</label><br>
-                <input type="checkbox" id="skill6" name="skill1" value="Electrical">
-                <label for="skill6"><span><span></span></span>Electrical</label><br>
-                <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
-                <label for="skill7"><span><span></span></span>Equipment operation</label><br>
-                <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
-                <label for="skill8"><span><span></span></span>Event preparation</label><br>
-                <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
-                <label for="skill9"><span><span></span></span>Fellowship</label><br>
-                <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
-                <label for="skill10"><span><span></span></span>Food preparation/Serving</label><br>
-            
-                <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
-                <label for="skill11"><span><span></span></span>Landscaping</label><br>
-                <input type="checkbox" id="skill12" name="skill1" value="Light construction">
-                <label for="skill12"><span><span></span></span>Light construction</label><br>
-                <input type="checkbox" id="skill13" name="skill1" value="Masonry">
-                <label for="skill13"><span><span></span></span>Masonry</label><br>
-                <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
-                <label for="skill14"><span><span></span></span>Medical/Healthcare</label><br>
-                <input type="checkbox" id="skill15" name="skill1" value="Painting">
-                <label for="skill15"><span><span></span></span>Painting</label><br>
-                <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
-                <label for="skill16"><span><span></span></span>Pet/Wildlife</label><br>
-                <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
-                <label for="skill17"><span><span></span></span>Plumbing</label><br>
-                <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
-                <label for="skill18"><span><span></span></span>Stocking/Organizing</label><br>
-                <input type="checkbox" id="skill19" name="skill1" value="Transportation">
-                <label for="skill19"><span><span></span></span>Transportation</label><br>
-                <input type="checkbox" id="skill20" name="skill1" value="Other">
-                <label for="skill20"><span><span></span></span>Other</label><br>
-           -->
-
-           <div id= textpadding> Materials </div>
-          <div class="col-100">
-            <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
-          </div>
-          <div class="col-100">
-            <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items Volunteers Should Bring">
-          </div>
-          <br>
-
-          <div id= textpadding> Number of Volunteers Needed </div>
-          <div class="col-100">
-            <input type="number" id="quantity" name="quantity" placeholder="Number">
-          </div>
-          <br>
-
-          <div id= textpadding> Contact Information </div>
-          <div class="col-100">
-            <input type="text" id="Name" name="Name" placeholder="Name">
-          </div>
-          <div class="col-100">
-            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
-          </div>
-          <div class="col-100">
-            <input type="text" id="Organization" name="Organization" placeholder="Organization (if applicable)">
-          </div>
-          <div class="col-100">
-            <input type="text" id="OrganizationWebsite" name="OrganizationWebsite" placeholder="Organization Website (if applicable)">
-          </div>
-          <br><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+            <td><input type="checkbox" id="skill20" name="skill1" value="Other">
+              <label for="skill20"><span><span></span></span>Other</label></td><br>
+          </tr>
+        </table><br>
+        <div> Materials </div>
+        <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
+        <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items Volunteers Should Bring"><br>
+        <div> Number of Volunteers Needed </div>
+        <input type="number" id="quantity" name="quantity" placeholder="Number"><br>
+        <div> Contact Information </div>
+        <input type="text" id="Name" name="Name" placeholder="Name">
+        <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
+        <input type="text" id="Organization" name="Organization" placeholder="Organization (if applicable)">
+        <input type="text" id="OrganizationWebsite" name="OrganizationWebsite" placeholder="Organization Website (if applicable)"><br><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </form>
 </div>
 
+<!-- Title -->
 <div class="title">
-<h1> Helping Hand </h1>
+  <h1> Helping Hand </h1>
 </div>
 
-
+<!-- Search Bar -->
 <div class="searchwrap">
   <div class="search">
     <input type="textsearch" class="searchTerm" placeholder="Search for Keyword or Location">

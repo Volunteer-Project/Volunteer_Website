@@ -1,268 +1,192 @@
 <!DOCTYPE html>
 <hmtl>
-    <head>
-        <title> Account Page </title>
+  <head>
+    <title> Account Page </title>
+    <link rel="stylesheet" href="resources/css/account_page.css">
+  </head>
 
-        <!--temporary style test-->
-            <link rel = "stylesheet" href = "resources/css/account_page.css">
-            <link rel = "stylesheet" href = "resources/css/account_page_forms.css">
-			<link rel = "stylesheet" href = "resources/css/home.css">
-    </head>
-    
-            <body>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="Home.html" class="active">Home</a>
+    </div>
+	
+    <div class="tab">
+      <button class="tablinks" onclick="openSection(event, 'section1')">Account Info</button>
+      <button class="tablinks" onclick="openSection(event, 'section2')">Interests</button>
+      <button class="tablinks" onclick="openSection(event, 'section3')">Lists</button>
+      <button class="tablinks" onclick="openSection(event, 'section4')">Privacy</button>
+    </div>
 
+    <div id="section1" class="tabinfo">
+      <!--<h3>My Acccount</h3>-->
+      <div class="space">
+        <table style="width:25%">
+          <!--table row = tr     table data cell = td     table header = th-->
+          <tr class="spaceUnder">
+            <td>First Name:</td>
+            <td>value</td>
+          </tr>
+          <tr class="spaceUnder">
+            <td>Last Name:</td>
+            <td>value</td>
+          </tr>
+          <tr class="spaceUnder">
+            <td> Username:</td>
+            <td>value</td>
+          </tr>
+          <tr class="spaceUnder">
+            <td>Phone Number:</td>
+            <td>value</td>
+          </tr>
+          <tr class="spaceUnder">
+            <td>Email Address:</td>
+            <td>value</td>
+          </tr>
+          <tr class="spaceUnder">
+            <td>Street Address:</td>
+            <td>value</td>
+          </tr>
+          <tr>
+            <td>Current Password:</td>
+            <td>value</td>
+          </tr>
+        </table>
+      </div>
 
+      <!--form overlay-->
+      <!-- Trigger/Open The Modal -->
 
-<div class="topnav" id="myTopnav">
-  <a href="Home.html" class="active">Home</a>
-  </div>
+      <button id="myBtn">Edit Information</button>
+      <br><br>
 
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <form class="modal-content animate" method="post">
+          <span class="close">&times;</span>
+          <!--<span class="close">&times;</span>-->
 
-
-                
-            
-                <!--profile photo area-->
-                
-
-
-            
-                <div class="tab">
-                <button class="tablinks" onclick="openSection(event, 'section1')">Account Info</button>
-                <button class="tablinks" onclick="openSection(event, 'section2')">Interests</button>
-                <button class="tablinks" onclick="openSection(event, 'section3')">Lists</button>
-                <button class="tablinks" onclick="openSection(event, 'section4')">Privacy</button>
-            
+          <div class="card">
+            <h1 style="padding-left: 10px"> Account Info </h1>
+            <form>
+              <!--name-->
+              <div class="sbr">
+                <div class="half_field">
+                  <input type="text" id="fname" name="firstname" placeholder="First Name">
                 </div>
-            
-                <div id="section1" class="tabinfo">
-                    <!--<h3>My Acccount</h3>-->
-                    <div class = "space"> 
-                        <table style="width:25%">
-
-                            <!--table row = tr     table data cell = td     table header = th-->
-                          
-                            <tr class = "spaceUnder"> 
-                              <td>First Name:</td>
-                              <td>value</td>
-                            </tr>
-                                <tr class = "spaceUnder">
-                                <td>Last Name:</td>
-                                <td>value</td>
-                                </tr>
-                                    <tr class = "spaceUnder"> 
-                                    <td> Username:</td>
-                                    <td>value</td>
-                                    </tr>
-                                        <tr class = "spaceUnder">
-                                        <td>Phone Number:</td>
-                                        <td>value</td>
-                                        </tr>
-                                            <tr class = "spaceUnder"> 
-                                            <td>Email Address:</td>
-                                            <td>value</td>
-                                            </tr>
-                                                <tr class = "spaceUnder">
-                                                <td>Street Address:</td>
-                                                <td>value</td>
-                                                </tr> 
-                                                    <tr>
-                                                    <td>Current Password:</td>
-                                                    <td>value</td>
-                                                    </tr>
-                         
-                        </table>
-                   
-                    
+                <div class="half_field">
+                  <input type="text" id="lname" name="lastname" placeholder="Last Name">
                 </div>
-
-  
-                                <!--form overlay-->
-        
-                                <!-- Trigger/Open The Modal -->
-                                <button id="myBtn">Edit Information</button>
-                               <br><br>
-                         
-
-                                <!-- The Modal -->
-                                <div id="myModal" class="modal">
-
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <div class="card">
-                                            <h1 style="padding-left: 5px" > Account Info </h1><br>
-                                              <form>
-                                                <!--name-->
-                                                    <div class="row">
-                                                        <div class="col-25">
-                                                        <input type="text" id="fname" name="firstname" placeholder="First Name">
-                                                        </div>
-                                                        <div class="col-25">
-                                                        <input type="text" id="lname" name="lastname" placeholder="Last Name">
-                                                        </div>
-                                                    </div> 
-                                                <!--username & phone-->     
-                                                    <div class="row">
-                                                        <div class="col-25">
-                                                        <input type="text" id="uname" name="username" placeholder="Username">
-                                                        </div>
-                                                        <div class="col-25">
-                                                        <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
-                                                        </div>
-                                                    </div>  
-                                                <!--email-->    
-                                                    <div class="row">
-                                                        <div class="col-75">
-                                                        <input type="text" id="email" name="email" placeholder="Email">
-                                                        </div>
-                                                    </div>
-                                                <!--street address-->    
-                                                    <div class="row">
-                                                        <div class="col-75">
-                                                        <input type="text" id="address" name="address" placeholder="Street Address">
-                                                        </div>
-                                                    </div>
-                                                <!--password & confirm-->
-                                                    <div class="row">
-                                                        <div class="col-25">
-                                                        <input type="text" id="npw" name="newpassword" placeholder="New Password">
-                                                        </div>
-                                                        <div class="col-25">
-                                                        <input type="text" id="confirm" name="password" placeholder="Confirm">
-                                                        </div>
-                                                    </div>
-                                                <!--save changes button-->
-                                                <div class="row">
-                                                    <input type="submit" value="Save" > <!--*onclick="display()"-->
-                                                </div>
-                                      
-                                              </form>
-                                          </div>
-                                      
-                                            </div>
-                                    </div>
-                                </div> <!--end of modal content-->
-
-                                </div>
-
-                            </div> <!--end of tab --> 
-                                                            
-            
-                <div id="section2" class="tabinfo">
-                    <!--<h3>Interests</h3>-->
-                    <div class = "space"> 
-                        <table style="width:25%">
-                            <!--table row = tr     table data cell = td     table header = th-->
-                            <tr>
-                              
-                            </tr>
-                            <tr class = "spaceUnder"> 
-                              <td>Skills & Abilities:</td>
-                              <td>value</td>
-                            </tr>
-                                <tr>
-                                <td>Current Organizations:</td>
-                                <td>value</td>
-                                </tr>
-                           
-                         
-                        </table>
-                    </div>
-                    
-            
-                    <!-- Trigger/Open The Modal -->
-                    <button id="myBtn2">Edit Information</button>
-                    <br><br>
-
-                    <!-- The Modal -->
-                    <div id="myModal2" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="card">
-                                <h1 style="padding-left: 5px" > Interests </h1><br>
-                                  <form>
-                                    <!--skills-->
-                                    <div class="row">
-                                      <div class="col-75">
-                                        <textarea id="subject" name="skills" placeholder="Skills" style="height:100px"></textarea>
-                                      </div>
-                                    </div>
-                          
-                                    <div class="row">
-                                      <div class="col-75">
-                                        <textarea id="subject" name="org" placeholder="Current Organizations" style="height:100px"></textarea>
-                                      </div>
-                                    </div>
-                          
-                                    <!--save changes button-->
-                                    <div class="row">
-                                        <input type="submit" value="Save">
-                                    </div>
-                          
-                                  </form>
-                          
-                                </div>
-                              </div>
-                        </div>
-                    
-                    </div>
-
-                    </div>
-
-
-                </div> <!--end of tab-->
-
-               
-         
-
-
-                <div id="section3" class="tabinfo">
-                    <!--<h3>Lists</h3>-->
-                    <!--different display method-->
-                    <div class = "space"> 
-                                           
-                            &emsp;Past Projects: <br><br>
-                            &emsp;Favorited Projects:<br><br>
-        
-                    </div>
-
+              </div>
+              <!--username & phone-->
+              <div class="sbr">
+                <div class="half_field">
+                  <input type="text" id="uname" name="username" placeholder="Username">
                 </div>
+                <div class="half_field">
+                  <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
+                </div>
+              </div>
+              <!--email-->
+              <div class="sbr">
+                <div class="full_field">
+                  <input type="text" id="email" name="email" placeholder="Email">
+                </div>
+              </div>
+              <!--street address-->
+              <div class="sbr">
+                <div class="full_field">
+                  <input type="text" id="address" name="address" placeholder="Street Address">
+                </div>
+              </div>
+              <!--password & confirm-->
+              <div class="sbr">
+                <div class="half_field">
+                  <input type="text" id="npw" name="newpassword" placeholder="New Password">
+                </div>
+                <div class="half_field">
+                  <input type="text" id="confirm" name="password" placeholder="Confirm">
+                </div>
+              </div>
+              <!--save changes button-->
+              <input type="submit" value="Save">
+              <!--*onclick="display()"-->
+            </form>
+          </div>
+        </form>
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of tab -->
 
+    <div id="section2" class="tabinfo">
+      <!--<h3>Interests</h3>-->
+      <div class="space">
+        <table style="width:25%">
+          <!--table row = tr     table data cell = td     table header = th-->
+          <tr>
+          </tr>
+          <tr class="spaceUnder">
+            <td>Skills & Abilities:</td>
+            <td>value</td>
+          </tr>
+          <tr>
+            <td>Current Organizations:</td>
+            <td>value</td>
+          </tr>
+        </table>
+      </div>
 
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn2">Edit Information</button>
+      <br><br>
+      <!-- The Modal -->
+      <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <form class="modal-content animate" method="post">
+          <span class="close">&times;</span>
+          <div class="card">
+            <h1 style="padding-left: 5px"> Interests </h1>
+            <form>
+              <!--skills-->
+              <div class="sbr">
+                <div class="full_field">
+                  <textarea id="subject" name="skills" placeholder="Skills" style="height:100px"></textarea>
+                </div>
+              </div>
+              <div class="sbr">
+                <div class="full_field">
+                  <textarea id="subject" name="org" placeholder="Current Organizations" style="height:100px"></textarea>
+                </div>
+              </div>
+              <!--save changes button-->
+              <div class="sbr">
+                <input type="submit" value="Save">
+              </div>
+            </form>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--end of tab-->
 
-                    <div id="section4" class="tabinfo">
-                    <!--<h3>Privacy</h3>-->
-                    <!--different display method-->
-                    <div class = "space"> 
-                        &emsp;Search History: <br><br>
-                        &emsp;Blocked Accounts/users: <br><br>
+    <div id="section3" class="tabinfo">
+      <!--<h3>Lists</h3>-->
+      <!--different display method-->
+      <div class="space">
+        &emsp;Past Projects: <br><br>
+        &emsp;Favorited Projects:<br><br>
+      </div>
+    </div>
 
-                        </div>
-                    </div>   
-                      
-                
-            
-                <!--EXTERNAL JAVASCRIPT FILE-->
-                <script src = "resources/js/account_page.js"> </script>
-
-
-                        <!--be careful this is an html file for forms.  BE CAREFUL NOT TO MESS IT UP
-                            
-                        <object data="account_page_forms.html.html" > </object>
-                        -->
-              
-            </body>
-
-
-    
+    <div id="section4" class="tabinfo">
+      <!--<h3>Privacy</h3>-->
+      <!--different display method-->
+      <div class="space">
+        &emsp;Search History: <br><br>
+        &emsp;Blocked Accounts/users: <br><br>
+      </div>
+    </div>
+	    <script src="resources/js/account_page.js"> </script>
+  </body>
 </hmtl>

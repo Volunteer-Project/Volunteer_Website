@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+  <title>View Project</title>
   <link rel="stylesheet" type="text/css" href="resources/css/viewproject.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="resources/js/homeScript.js"></script>
@@ -11,9 +12,10 @@
 
   </style>
 </head>
-<div class="topnav" id="myTopnav">
-  <a href="Home.html" class="active">Home</a>
 
+<!-- Top Navigation -->
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active" style="width:auto; float: left;">Home</a>
 
   <div class="searchwrap">
     <div class="search">
@@ -24,109 +26,58 @@
     </div>
   </div>
 
-
   <modalbutton onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;">Sign Up</modalbutton>
   <modalbutton onclick="document.getElementById('id02').style.display='block'" style="width:auto; float: right;">Login</modalbutton>
   <modalbutton onclick="document.getElementById('id03').style.display='block'" style="width:auto; float: right;">Post Project</modalbutton>
   <a href=account_page.html style="width:auto; float: right;">Account</a>
-  <!-- menu icon when small 
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 </div>
--->
 
-  
-  <!-- Sign up -->
-  <div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php" method="post">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      </div>
-
-      <div class="container">
-        <div class="card2">
-          <h1 style="padding-left: 5px"> Sign Up </h1>
-          <form>
-            <div class="col-100">
-              <input type="text" id="fname" name="firstname" placeholder="First Name" required>
-            </div>
-            <div class="col-100">
-              <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
-            </div>
-            <div class="row">
-              <div class="col-100">
-                <input type="text" id="email" name="email" placeholder="Email" required>
-              </div>
-            </div><br>
-            <div id = textpadding>Password must have at least 8 characters.<br>
-            Use at least one number, letter, and special character. </div>
-            <div class="row">
-              <div class="col-100">
-                <input type="password" id="password" value="password" name="password" placeholder="Password" required><br><br>
-
-                <!-- works, but have to link external js page-->
-                <input type="checkbox" id = "showpassword" name="show" value = "Show Password" onclick="confirmToggle()" >
-                <label for="showpassword"><span><span></span></span>Show Password</label>
-       
-
-
-              </div>
-              <div class="col-100">
-                <input type="password" id="confirm" name="password" placeholder="Confirm" required><br>
-                <br>
-                <input type="checkbox" id = "showpassword2" name="show" value = "Show Password" onclick="confirmToggle()" >
-                <label for="showpassword2"><span><span></span></span>Show Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-100">
-                <textarea id="subject" name="bio" placeholder="Bio" style="height:100px; width:320px;" required></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-100">
-                <input type="text" id="group" name="group" placeholder="Affiliated group (If applicable)">
-              </div>
-            </div><br><br>
-            <div class="row">
-              <input type="submit" value="Submit">
-            </div>
-          </form>
+<!-- Sign up -->
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1 style="padding-left: 5px"> Sign Up </h1>
+      <form>
+        <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+        <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+        <input type="text" id="email" name="email" placeholder="Email" required><br>
+        <div style="padding: 10px 10px;">
+          <div>Password must have at least 8 characters.<br>
+            Use at least one number, letter, and special character.
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input type="checkbox" id="showpassword" name="show" value="Show Password" onclick="passwordToggle()">
+        <label for="showpassword"><span><span></span></span>Show Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Confirm" required><br>
+        <input type="checkbox" id="showpassword2" name="show" value="Show Password" onclick="confirmToggle()">
+        <label for="showpassword2"><span><span></span></span>Show Password</label>
+        <input type="text" id="group" name="group" placeholder="Affiliated group (If applicable)">
+        <div style="padding: 5px 10px;">
+          <p>Our Mission: We want to make a community driven platform with the goal to offer a Helping Hand
+            to anybody who needs help. Thanks for signing up!</p>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </form>
 </div>
-
 
 <!-- Login -->
 <div id="id02" class="modal">
   <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <div class="card2">
-        <h1 style="padding-left: 5px">Login </h1>
-        <form>
-          <div class="col-100">
-            <input type="text" id="emailcheck" name="email" placeholder="Email" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="passwordcheck" name="password" placeholder="Password" required><br><br>
-          </div>
-            <input type="checkbox" id = "rempassword" name="remember" value = "Remember Me"> 
-              <label for="rempassword"><span><span></span></span>Remember Me</label><br>
-          </label>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-          <div class="row">
-            <br><br><br><br>
-            <input type="submit" value="Submit">
-          </div>
-        </form>
-      </div>
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1>Login </h1>
+      <form>
+        <input type="text" id="emailcheck" name="email" placeholder="Email" required>
+        <input type="text" id="passwordcheck" name="password" placeholder="Password" required><br>
+        <input type="checkbox" id="rempassword" name="remember" value="Remember Me">
+        <label for="rempassword"><span><span></span></span>Remember Me</label><br>
+        <span class="password"> <a href="#">Forgot password?</a></span><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </form>
 </div>
@@ -134,163 +85,114 @@
 <!-- Post Project -->
 <div id="id03" class="modal">
   <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container">
-      <div class="card2">
-        <h1 style="padding-left: 5px">Post Your Project </h1>
-        <br>
-        <form>
-     
-          <div class="col-100">
-            <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="Description" name="Description" placeholder="Description" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="Address" name="Address" placeholder="Address" required>
-          </div>
-          <div class="col-100">
-            <input type="text" id="location" name="location" placeholder="Name of Facility or Location">
-          </div>
-          <div class="col-100">
-            <input type="text" id="MeetingPoint" name="MeetingPoint" placeholder="Meeting Point">
-          </div>
-          <div class="col-100">
-            <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
-          </div>
-          <div class="col-100">
-              <input type="date" id="date" name="date" placeholder = "date"><br><br>
-          </div>
-        
-
-
-          <div id= textpadding> Volunteer Policy </div><br>
-          <div>
-            <tr>
-              <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
-              <label for="showup"><span><span></span></span>Just show up</label><br>
-              <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
-              <label for="contacthost"><span><span></span></span>Contact organizer before arriving</label><br><br>
-            </tr>
-          </div>
-
-
-          <div id= textpadding> Skills needed (Select all that apply) </div>
-          <!--tr = table row    th = table header   td = table data cell-->
-          <table style="width:100%">
-            <tr>
-              <td> <input type="checkbox" id="skill1" name="skill1" value="Childcare">
-                <label for="skill1"><span><span></span></span>Childcare</label></td>
-              <td>  <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
-                <label for="skill11"><span><span></span></span>Landscaping</label></td>
-            </tr>
-
-            <tr>
-              <td> <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
-                <label for="skill2"><span><span></span></span>Cleaning</label><br></td>
-              <td> <input type="checkbox" id="skill12" name="skill1" value="Light construction">
-                <label for="skill12"><span><span></span></span>Light construction</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
-                <label for="skill3"><span><span></span></span>Clinical work</label><br></td>
-              <td><input type="checkbox" id="skill13" name="skill1" value="Masonry">
-                <label for="skill13"><span><span></span></span>Masonry</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill4" name="skill1" value="Demolition">
-                <label for="skill4"><span><span></span></span>Demolition</label><br></td>
-              <td>          <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
-                <label for="skill14"><span><span></span></span>Medical/Healthcare</label></td>
-            </tr>
-            <tr>
-              <td>   <input type="checkbox" id="skill5" name="skill1" value="Drywall">
-                <label for="skill5"><span><span></span></span>Drywall</label></td>
-              <td>
-                <input type="checkbox" id="skill15" name="skill1" value="Painting">
-                <label for="skill15"><span><span></span></span>Painting</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill6" name="skill1" value="Electrical">
-                <label for="skill6"><span><span></span></span>Electrical</label><br></td>
-              <td>     <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
-                <label for="skill16"><span><span></span></span>Pet/Wildlife</label></td>
-            </tr>
-            <tr>
-              <td>   <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
-                <label for="skill7"><span><span></span></span>Equipment operation</label></td>
-              <td> <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
-                <label for="skill17"><span><span></span></span>Plumbing</label></td>
-            </tr>
-            <tr>
-              <td>  <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
-                <label for="skill8"><span><span></span></span>Event preparation</label></td>
-              <td>         
-                <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
-                <label for="skill18"><span><span></span></span>Stocking/Organizing</label></td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
-                <label for="skill9"><span><span></span></span>Fellowship</label><br></td>
-              <td>        <input type="checkbox" id="skill19" name="skill1" value="Transportation">
-                <label for="skill19"><span><span></span></span>Transportation</label><br></td>
-            </tr>
-            <tr>
-              <td> <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
-                <label for="skill10"><span><span></span></span>Food preparation/Serving</label>
+    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="card">
+      <h1 style="padding-left: 5px">Post Your Project </h1>
+      <form>
+        <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
+        <input type="text" id="Description" name="Description" placeholder="Description" required>
+        <input type="text" id="Address" name="Address" placeholder="Address" required>
+        <input type="text" id="location" name="location" placeholder="Name of Facility or Location">
+        <input type="text" id="MeetingPoint" name="MeetingPoint" placeholder="Meeting Point">
+        <input type="text" id="DressCode" name="DressCode" placeholder="Dress Code">
+        <input type="date" id="date" name="date" placeholder="date"><br><br>
+        <div id=textpadding> Volunteer Policy </div><br>
+        <div>
+          <tr>
+            <input type="radio" id="showup" name="VolunteerPolicy" value="showup">
+            <label for="showup"><span><span></span></span>Just show up</label><br>
+            <input type="radio" id="contacthost" name="VolunteerPolicy" value="contacthost">
+            <label for="contacthost"><span><span></span></span>Contact organizer before arriving</label><br><br>
+          </tr>
+        </div>
+        <div> Skills needed (Select all that apply) </div>
+        <!--tr = table row    th = table header   td = table data cell-->
+        <table style="width:100%">
+          <tr>
+            <td> <input type="checkbox" id="skill1" name="skill1" value="Childcare">
+              <label for="skill1"><span><span></span></span>Childcare</label></td>
+            <td> <input type="checkbox" id="skill11" name="skill1" value="Landscaping">
+              <label for="skill11"><span><span></span></span>Landscaping</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill2" name="skill1" value="Cleaning">
+              <label for="skill2"><span><span></span></span>Cleaning</label><br></td>
+            <td> <input type="checkbox" id="skill12" name="skill1" value="Light construction">
+              <label for="skill12"><span><span></span></span>Light construction</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill3" name="skill1" value="Clinical work">
+              <label for="skill3"><span><span></span></span>Clinical work</label><br></td>
+            <td><input type="checkbox" id="skill13" name="skill1" value="Masonry">
+              <label for="skill13"><span><span></span></span>Masonry</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill4" name="skill1" value="Demolition">
+              <label for="skill4"><span><span></span></span>Demolition</label><br></td>
+            <td> <input type="checkbox" id="skill14" name="skill1" value="Medical/Healthcare">
+              <label for="skill14"><span><span></span></span>Medical/Healthcare</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill5" name="skill1" value="Drywall">
+              <label for="skill5"><span><span></span></span>Drywall</label></td>
+            <td>
+              <input type="checkbox" id="skill15" name="skill1" value="Painting">
+              <label for="skill15"><span><span></span></span>Painting</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill6" name="skill1" value="Electrical">
+              <label for="skill6"><span><span></span></span>Electrical</label><br></td>
+            <td> <input type="checkbox" id="skill16" name="skill1" value="Pet/Wildlife">
+              <label for="skill16"><span><span></span></span>Pet/Wildlife</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill7" name="skill1" value="Equipment operation">
+              <label for="skill7"><span><span></span></span>Equipment operation</label></td>
+            <td> <input type="checkbox" id="skill17" name="skill1" value="Plumbing">
+              <label for="skill17"><span><span></span></span>Plumbing</label></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill8" name="skill1" value="Event preparation">
+              <label for="skill8"><span><span></span></span>Event preparation</label></td>
+            <td>
+              <input type="checkbox" id="skill18" name="skill1" value="Stocking/Organizing">
+              <label for="skill18"><span><span></span></span>Stocking/Organizing</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="skill9" name="skill1" value="Fellowship">
+              <label for="skill9"><span><span></span></span>Fellowship</label><br></td>
+            <td> <input type="checkbox" id="skill19" name="skill1" value="Transportation">
+              <label for="skill19"><span><span></span></span>Transportation</label><br></td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" id="skill10" name="skill1" value="Food preparation/Serving">
+              <label for="skill10"><span><span></span></span>Food preparation/Serving</label>
             </td>
-              <td><input type="checkbox" id="skill20" name="skill1" value="Other">
-                <label for="skill20"><span><span></span></span>Other</label></td><br>
-            </tr>
-          </table>
-          <br>
-
-         
-         
-     
-     
-
-           <div id= textpadding> Materials </div>
-          <div class="col-100">
-            <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
-          </div>
-          <div class="col-100">
-            <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items Volunteers Should Bring">
-          </div>
-          <br>
-
-          <div id= textpadding> Number of Volunteers Needed </div>
-          <div class="col-100">
-            <input type="number" id="quantity" name="quantity" placeholder="Number">
-          </div>
-          <br>
-
-          <div id= textpadding> Contact Information </div>
-          <div class="col-100">
-            <input type="text" id="Name" name="Name" placeholder="Name">
-          </div>
-          <div class="col-100">
-            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
-          </div>
-          <div class="col-100">
-            <input type="text" id="Organization" name="Organization" placeholder="Organization (if applicable)">
-          </div>
-          <div class="col-100">
-            <input type="text" id="OrganizationWebsite" name="OrganizationWebsite" placeholder="Organization Website (if applicable)">
-          </div>
-          <br><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+            <td><input type="checkbox" id="skill20" name="skill1" value="Other">
+              <label for="skill20"><span><span></span></span>Other</label></td><br>
+          </tr>
+        </table><br>
+        <div> Materials </div>
+        <input type="text" id="itemsNeeded" name="itemsNeeded" placeholder="Items Needed">
+        <input type="text" id="itemsVolunteerbrings" name="itemsVolunteerbrings" placeholder="Items Volunteers Should Bring"><br>
+        <div> Number of Volunteers Needed </div>
+        <input type="number" id="quantity" name="quantity" placeholder="Number"><br>
+        <div> Contact Information </div>
+        <input type="text" id="Name" name="Name" placeholder="Name">
+        <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
+        <input type="text" id="Organization" name="Organization" placeholder="Organization (if applicable)">
+        <input type="text" id="OrganizationWebsite" name="OrganizationWebsite" placeholder="Organization Website (if applicable)"><br><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </form>
 </div>
 
-<br><br>
+
+
+
+<!-- Web page  -->
 
 <div class="dropdown">
   <button class="filterBtn">Filter Projects:</button>
@@ -302,349 +204,225 @@
   </div>
 </div>
 
-
-
 <div style="margin-left: 20px; color:white">
-<h1> Searched for Troy </h1>
-</div>
-<br><br>
-
-
-<div class="wrapper">
-
-  <div class="card radius shadowDepth1">
-    <div class="card__image border-tlr-radius">
-      <img src="resources/images/house01.png" alt="image" class="border-tlr-radius">
-    </div>
-
-    <div class="card__content card__padding">
-      <div class="card__share">
-
-        <a id="share" class="share-toggle share-icon" href="#"></a>
-        <a id="share" class="share-toggle1 share-icon" href="#"></a>
-      </div>
-
-      <div class="card__meta">
-        <a href="#">March 5th</a>
-        <time>3pm</time>
-      </div>
-
-      <article class="card__article">
-        <h2><a href="#">Painting House</a></h2>
-
-        <p>Address: 104 Dendron Ave, Troy, AL 36081</p>
-        <p>Skills required: Painting</p>
-        
-      </article>
-    </div>
-
-    <div class="card__action">
-
-      <div class="card__author">
-
-        <div class="card__author-content">
-          By <a href="#">John Tran</a>
-
-        </div>
-
-        <!--first project expansion button-->
-        <modalbutton onclick="document.getElementById('id04').style.display='block'" style="width:auto; float: right;">View Project</modalbutton>
-		
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="wrapper">
-<div class="card radius shadowDepth1">
-  <div class="card__image border-tlr-radius">
-    <img src="resources/images/house02.png" alt="image" class="border-tlr-radius">
-  </div>
-
-  <div class="card__content card__padding">
-    <div class="card__share">
-
-      <a id="share" class="share-toggle share-icon" href="#"></a>
-      <a id="share" class="share-toggle1 share-icon" href="#"></a>
-    </div>
-
-    <div class="card__meta">
-      <a href="#">March 11th</a>
-      <time>5pm</time>
-    </div>
-
-    <article class="card__article">
-      <h2><a href="#">Fellowship Service</a></h2>
-      <p>Address: Trojan Center, College Dr, Troy, AL 26081</p>
-      <p>Skills required: Fellowship, Equipment Operation</p>
-
-    </article>
-  </div>
-
-  <div class="card__action">
-
-    <div class="card__author">
-
-      <div class="card__author-content">
-        By <a href="#">John Tran</a>
-
-      </div>
-
-      	<!--second project expansion button-->
-		    <modalbutton onclick="document.getElementById('id05').style.display='block'" style="width:auto; float: right;">View Project</modalbutton>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="wrapper">
-<div class="card radius shadowDepth1">
-  <div class="card__image border-tlr-radius">
-    <img src="resources/images/house03.png" alt="image" class="border-tlr-radius">
-  </div>
-
-  <div class="card__content card__padding">
-    <div class="card__share">
-
-      <a id="share" class="share-toggle share-icon" href="#"></a>
-      <a id="share" class="share-toggle1 share-icon" href="#"></a>
-    </div>
-
-    <div class="card__meta">
-      <a href="#">March 13th - 20th</a>
-      <time>8am</time>
-    </div>
-
-    <article class="card__article">
-      <h2><a href="#">RIP Lee's Buffet</a></h2>
-      <p>Address: Lee's Chinese Buffet , 1208 US-231, Troy, AL 36081</p>
-      <p>Skills required: Demolition, Landscaping, Cleaning, Fellowship</p>
-
-    </article>
-  </div>
-
-  <div class="card__action">
-
-    <div class="card__author">
-
-      <div class="card__author-content">
-        By <a href="#">John Tran</a>
-
-      </div>
-	 
-      	<!--third project expansion button-->
-        <modalbutton onclick="document.getElementById('id06').style.display='block'" style="width:auto; float: right;">View Project</modalbutton>
-        
-    </div>
-  </div>
-</div>
+  <h1> Searched for Troy </h1>
 </div>
 
 
-<!--first project expansion-->
-<div id="id04" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
+  <!-- 1st project -->
+  <div class="projectwrapper">
+  <div class="card">
+    <div class="card_image">
+      <img src="resources/images/house01.png" alt="image">
+    </div>
+    <div class="card_button">
+      <a id="flag" class="flag button-icon"></a>
+      <a id="favorite" class="favorite button-icon"></a>
+    </div>
+    <div class="card_content">
+      <h1>Painting House</h1>
+      <p><b>Address:</b> 104 Dendron Ave, Troy, AL 36081</p>
+      <p><b>Date and time: </b>March 5th at 3pm</p>
+      <p><b>Skills required:</b> Painting</p>
+    </div>
+    <div class="card_footer">
+      <modalbutton onclick="document.getElementById('id04').style.display='block'" style="width:auto; float: left;">View Project</modalbutton>
+    </div>
+  </div>
+  </div>
+  <!-- 2nd project -->
+  <div class="projectwrapper">
+  <div class="card">
+    <div class="card_image">
+      <img src="resources/images/house02.png" alt="image">
+    </div>
+    <div class="card_button">
+      <a id="flag" class="flag button-icon"></a>
+      <a id="favorite" class="favorite button-icon"></a>
+    </div>
+    <div class="card_content">
+      <h1>Fellowship Service</h1>
+      <p><b>Address: </b> Trojan Center, College Dr, Troy, AL 26081</p>
+      <p><b>Date and time: </b>March 11th at 5pm</p>
+      <p><b>Skills required: </b>Fellowship, Equipment Operation</p>
+    </div>
+    <div class="card_footer">
+      <modalbutton onclick="document.getElementById('id05').style.display='block'" style="width:auto; float: left;">View Project</modalbutton>
+    </div>
+  </div>
+  </div>
+  <!-- 3rd project -->
+  <div class="projectwrapper">
+  <div class="card">
+    <div class="card_image">
+      <img src="resources/images/house03.png" alt="image">
+    </div>
+    <div class="card_button">
+      <a id="flag" class="flag button-icon"></a>
+      <a id="favorite" class="favorite button-icon"></a>
+    </div>
+    <div class="card_content">
+      <h1>RIP Lee's Buffet</h1>
+      <p><b>Address: </b>Lee's Chinese Buffet , 1208 US-231, Troy, AL 36081</p>
+      <p><b>Date and time: </b>March 13th-20th at 8am</p>
+      <p><b>Skills required: </b>Demolition, Landscaping, Cleaning, Fellowship</p>
+    </div>
+    <div class="card_footer">
+      <modalbutton onclick="document.getElementById('id06').style.display='block'" style="width:auto; float: left;">View Project</modalbutton>
+    </div>
+  </div>
+</div>
+
+
+  <!--first project expansion-->
+  <div id="id04" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
       <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container"> <!--div now closed-->
-   <div class="card radius shadowDepth1"><!--div now closed-->
-    <div class="card__image border-tlr-radius">
-      <img src="resources/images/house01.png" alt="image" class="border-tlr-radius">
-    </div>
-
-    <div class="card__content card__padding">
-      <article class="card__article">
-        <h1><a href="#">Painting House</a></h1>
-		<p> Our goal is to paint this house for a needy college student. 
-		He message us saying his HOA keeps pestering him about the look of his house even though he doesn't have time to work on it. He is just trying to pass his class and graduate.
-		Let's help me.. I mean him out.</p> 
-		<h2>Address</h2>
-        <p>104 Dendron Ave, Troy, AL 36081</p>
-		<h2>Meeting Point</h2>
-		<p>Trojan Center, College Dr, Troy, AL 26081</p>
-		<h2>Date and Time</h2>
-		<p>March 5th at 3pm</p>
-		<h2>Dress Code</h2>
-		<p>Any clothes you don't mind getting paint on</p>
-		<h2>Volunteer Policy</h2>
-		<p>Just show up</p>
-		<h2>Skills Needed</h2>
-        <p>Painting</p>
-		<h2>Materials: Items needed</h2>
-		<p>Paint rollers, Paint, and Paint Mats</p>
-		<h2>Items Volunteer should bring </h2>
-		<p>Please bring water, be sure to stay hyrdated while working outside</p>
-		<h2>Number of Volunteers Needed</h2>
-		<p>4</p>
-		<h1>Contact Info</h1>
-		<h3>Name</h3>
-		<p>John Tran</p>
-		<h3>Phone Number</h3>
-		<p>123-456-7890</p>
-		<h3>Organization</h3>
-		<p>Sad College Student Organization</p>
-		<h3>Organization Website</h3>
-		<p>https://www.facebook.com/john.m.tran.7?ref=bookmarks</p>
-		
-      </article>
-    </div> 
-
-    <div class="card__action">
-
-      <div class="card__author">
-
-        <div class="card__author-content">
-          By <a href="#">John Tran</a>
-
-    </div>
-    <br><br>
-	 <modalbutton  style="width:auto; float: right;">Contact Organizer</modalbutton>
+      <div class="container">
+        <div class="card">
+          <div class="card_image">
+            <img src="resources/images/house01.png" alt="image">
+          </div>
+          <div class="card_content">
+            <h1>Painting House</h1>
+            <p> Our goal is to paint this house for a needy college student.
+              He message us saying his HOA keeps pestering him about the look of his house even though he doesn't have time to work on it. He is just trying to pass his class and graduate.
+              Let's help me.. I mean him out.</p>
+            <h2>Address</h2>
+            <p>104 Dendron Ave, Troy, AL 36081</p>
+            <h2>Meeting Point</h2>
+            <p>Trojan Center, College Dr, Troy, AL 26081</p>
+            <h2>Date and Time</h2>
+            <p>March 5th at 3pm</p>
+            <h2>Dress Code</h2>
+            <p>Any clothes you don't mind getting paint on</p>
+            <h2>Volunteer Policy</h2>
+            <p>Just show up</p>
+            <h2>Skills Needed</h2>
+            <p>Painting</p>
+            <h2>Materials: Items needed</h2>
+            <p>Paint rollers, Paint, and Paint Mats</p>
+            <h2>Items Volunteer should bring </h2>
+            <p>Please bring water, be sure to stay hyrdated while working outside</p>
+            <h2>Number of Volunteers Needed</h2>
+            <p>4</p>
+            <h1>Contact Info</h1>
+            <h3>Name</h3>
+            <p>John Tran</p>
+            <h3>Phone Number</h3>
+            <p>123-456-7890</p>
+            <h3>Organization</h3>
+            <p>Sad College Student Organization</p>
+            <h3>Organization Website</h3>
+            <a href="https://www.facebook.com/john.m.tran.7?ref=bookmarks">www.facebook.com/john.m.tran.</a>
+          </div><br>
+          <div class="card_footer">
+            <modalbutton style="width:auto; float: left;">Contact Organizer</modalbutton>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
-   
-    </div>
-    </div>
-  </div>
-  </form>
-</div>
-
-<!--second project expansion-->
-<div id="id05" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
+  <!--second project expansion-->
+  <div id="id05" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
       <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container"> <!--div now closed-->
-   <div class="card radius shadowDepth1"><!--div now closed-->
-    <div class="card__image border-tlr-radius">
-      <img src="resources/images/house02.png" alt="image" class="border-tlr-radius">
-    </div>
-
-    <div class="card__content card__padding">
-
-      <article class="card__article">
-        <h1><a href="#">Fellowship Service</a></h1>
-		<p> Our goal is to create an engaging and inviting space for college students interested in growing their faith.
-    Students have submitted to the activities councel that they would like an outreach program and reserved space dedicated to exploring 
-    various religions with agnostic students.</p> 
-		<h2>Address</h2>
-        <p>Trojan Center, College Dr, Troy, AL 26081</p>
-		<h2>Meeting Point</h2>
-		<p>Trojan Center, College Dr, Troy, AL 26081</p>
-		<h2>Date and Time</h2>
-		<p>March 11th at 5pm</p>
-		<h2>Dress Code</h2>
-		<p>None</p>
-		<h2>Volunteer Policy</h2>
-		<p>Just show up</p>
-		<h2>Skills Needed</h2>
-        <p>Fellowship, Equipment Operation</p>
-		<h2>Materials: Items needed</h2>
-		<p>An open mind and heart, note-taking materials</p>
-		<h2>Items Volunteer should bring </h2>
-		<p>Please bring note taking materials.  Please be sure to do some research before and after meetings to form your questions and to broaden your study.</p>
-		<h2>Number of Volunteers Needed</h2>
-		<p>10</p>
-		<h1>Contact Info</h1>
-		<h3>Name</h3>
-		<p>Jamie Itáya Caple</p>
-		<h3>Phone Number</h3>
-		<p>222-555-0100</p>
-		<h3>Organization</h3>
-		<p>Agnostic Studies Assembly</p>
-		<h3>Organization Website</h3>
-		<p>In Progess</p>
-		
-      </article>
-
-    </div>
-
-    <div class="card__action">
-
-      <div class="card__author">
-
-        <div class="card__author-content">
-          By <a href="#">John Tran</a>
-
-    </div>
-    <br><br>
-	 <modalbutton  style="width:auto; float: right;">Contact Organizer</modalbutton>
-  </div>
-   
-    </div>
-    </div>
-    </div>
+      <div class="container">
+        <div class="card">
+          <div class="card_image">
+            <img src="resources/images/house02.png" alt="image">
+          </div>
+          <div class="card_content">
+            <h1>Fellowship Service</h1>
+            <p> Our goal is to create an engaging and inviting space for college students interested in growing their faith.
+              Students have submitted to the activities councel that they would like an outreach program and reserved space dedicated to exploring
+              various religions with agnostic students.</p>
+            <h2>Address</h2>
+            <p>Trojan Center, College Dr, Troy, AL 26081</p>
+            <h2>Meeting Point</h2>
+            <p>Trojan Center, College Dr, Troy, AL 26081</p>
+            <h2>Date and Time</h2>
+            <p>March 11th at 5pm</p>
+            <h2>Dress Code</h2>
+            <p>None</p>
+            <h2>Volunteer Policy</h2>
+            <p>Just show up</p>
+            <h2>Skills Needed</h2>
+            <p>Fellowship, Equipment Operation</p>
+            <h2>Materials: Items needed</h2>
+            <p>An open mind and heart, note-taking materials</p>
+            <h2>Items Volunteer should bring </h2>
+            <p>Please bring note taking materials. Please be sure to do some research before and after meetings to form your questions and to broaden your study.</p>
+            <h2>Number of Volunteers Needed</h2>
+            <p>10</p>
+            <h1>Contact Info</h1>
+            <h3>Name</h3>
+            <p>Jamie Itáya Caple</p>
+            <h3>Phone Number</h3>
+            <p>222-555-0100</p>
+            <h3>Organization</h3>
+            <p>Agnostic Studies Assembly</p>
+            <h3>Organization Website</h3>
+            <p>In Progess</p>
+          </div>
+          <div class="card_footer">
+            <modalbutton style="width:auto; float: left;">Contact Organizer</modalbutton>
+          </div>
+        </div>
+      </div>
     </form>
-</div>
-
-<!--third project expansion-->
-<div id="id06" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
+  </div>
+  <!--third project expansion-->
+  <div id="id06" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
       <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-    <div class="container"><!--div now closed-->
-   <div class="card radius shadowDepth1"><!--div now closed-->
-    <div class="card__image border-tlr-radius">
-      <img src="resources/images/house03.png" alt="image" class="border-tlr-radius">
-    </div>
-
-    <div class="card__content card__padding">
-
-
-      <article class="card__article">
-        <h1><a href="#">RIP Lee's Buffet</a></h1>
-		<p> Our goal is to welcome a new Asian cuisine buffet in the city of Troy, AL.  
-      The new restaurant is a startup franchise that needs help building their second location in Lee's Buffet's place.  
-      They have a sufficient funds for everything except dismantling the building, so they would be grateful to the help of 
-      City of Troy workers and volunteers.  First priority will be given to high school students towards their college admission applications.
-      Must be 18 years old or older to operate machinery.  All city of Troy workers will be paid according to their normal rates.  
-      All volunteers will have their hours recorded plus given a giftcard to the restaurant worth $50.
-    </p> 
-		<h2>Address</h2>
-        <p> Lee's Chinese Buffet , 1208 US-231, Troy, AL 36081</p>
-		<h2>Meeting Point</h2>
-		<p>Front parking lot</p>
-		<h2>Date and Time</h2>
-		<p>March 13th - 20th at 8am</p>
-		<h2>Dress Code</h2>
-		<p>Any clothes you don't mind getting messed up</p>
-		<h2>Volunteer Policy</h2>
-		<p>Contact organizer before arriving</p>
-		<h2>Skills Needed</h2>
-        <p> Demolition, Landscaping, Cleaning, Fellowship</p>
-		<h2>Materials: Items needed</h2>
-		<p>Utlilty tools, hydraulic excavator, utility vehichles, dump truck, mobile cranes, basic cleaning supplies, long handled hand tools (shovel, rake, etc.), gloves, and hardhats, etc. </p>
-		<h2>Items Volunteer should bring </h2>
-		<p>Please bring water, be sure to stay hyrdated while working outside</p>
-		<h2>Number of Volunteers Needed</h2>
-		<p></p>
-		<h1>Contact Info</h1>
-		<h3>Name</h3>
-		<p>John Tran</p>
-		<h3>Phone Number</h3>
-		<p>123-456-7890</p>
-		<h3>Organization</h3>
-		<p>AO80</p>
-		<h3>Organization Website</h3>
-		<p>www.aroundtheorientin80plates.com</p>
-		
-      </article>
-    </div>
-
-    <div class="card__action">
-
-      <div class="card__author">
-
-        <div class="card__author-content">
-          By <a href="#">John Tran</a>
-
-    </div>
-    
-	 <modalbutton  style="width:auto; float: right;">Contact Organizer</modalbutton>
-  </div>
-    </div>
-    </div>
-    </div>
+      <div class="container">
+        <div class="card">
+          <div class="card_image">
+            <img src="resources/images/house03.png" alt="image">
+          </div>
+          <div class="card_content">
+            <h1>RIP Lee's Buffet</h1>
+            <p> Our goal is to welcome a new Asian cuisine buffet in the city of Troy, AL.
+              The new restaurant is a startup franchise that needs help building their second location in Lee's Buffet's place.
+              They have a sufficient funds for everything except dismantling the building, so they would be grateful to the help of
+              City of Troy workers and volunteers. First priority will be given to high school students towards their college admission applications.
+              Must be 18 years old or older to operate machinery. All city of Troy workers will be paid according to their normal rates.
+              All volunteers will have their hours recorded plus given a giftcard to the restaurant worth $50.
+            </p>
+            <h2>Address</h2>
+            <p> Lee's Chinese Buffet , 1208 US-231, Troy, AL 36081</p>
+            <h2>Meeting Point</h2>
+            <p>Front parking lot</p>
+            <h2>Date and Time</h2>
+            <p>March 13th - 20th at 8am</p>
+            <h2>Dress Code</h2>
+            <p>Any clothes you don't mind getting messed up</p>
+            <h2>Volunteer Policy</h2>
+            <p>Contact organizer before arriving</p>
+            <h2>Skills Needed</h2>
+            <p> Demolition, Landscaping, Cleaning, Fellowship</p>
+            <h2>Materials: Items needed</h2>
+            <p>Utlilty tools, hydraulic excavator, utility vehichles, dump truck, mobile cranes, basic cleaning supplies, long handled hand tools (shovel, rake, etc.), gloves, and hardhats, etc. </p>
+            <h2>Items Volunteer should bring </h2>
+            <p>Please bring water, be sure to stay hyrdated while working outside</p>
+            <h2>Number of Volunteers Needed</h2>
+            <p></p>
+            <h1>Contact Info</h1>
+            <h3>Name</h3>
+            <p>John Tran</p>
+            <h3>Phone Number</h3>
+            <p>123-456-7890</p>
+            <h3>Organization</h3>
+            <p>AO80</p>
+            <h3>Organization Website</h3>
+            <a href="www.aroundtheorientin80plates.com">www.aroundtheorientin80plates.com</a>
+          </div><br>
+          <div class="card_footer">
+            <modalbutton style="width:auto; float: left;">Contact Organizer</modalbutton>
+          </div>
+        </div>
+      </div>
     </form>
-</div>
+  </div>
+

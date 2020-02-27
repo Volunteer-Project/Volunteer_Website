@@ -3,17 +3,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/*Navigation Bar */
+/* Navigation Bar */
 .topnav {
   overflow: hidden;
   background-color: #2C6BFF;
 }
 
-
-/*Navigation Bar "Home" */
+/* Navigation Bar "Home and Account" */
 .topnav a {
-  float: left;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
@@ -21,50 +18,11 @@ body {
   color: white;
 }
 
-/*Navigation Bar "Home" hover */
+/* Navigation Bar "Home and Account" hover */
 .topnav a:hover {
   background-color: #5588FF;
   color: black;
 }
-
-
-/*Navigation Bar "Menu Icon" */
-.topnav .icon {
-  display: none;
-}
-
-/*Navigation Bar "Menu Icon" appears when below 600px */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-
-  /*Navigation Bar "Menu Icon" */
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
 
 /* Set a style for all buttons "Login Button" & "Sign Up" */
 modalbutton {
@@ -82,60 +40,39 @@ modalbutton:hover {
   opacity: 0.8;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-  background-color: #2C6BFF;
-}
-
-.container {
-  padding: 16px;
-  background-color: #2C6BFF; 
-}
-
-span.psw {
+span.password {
   float: right;
-  padding-top: 16px;
+  padding-right: 16px;
+
 }
 
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  padding: 3px 15px;
+  width: 600px;
+  background-color: #2C6BFF;
   margin: 5% auto 15% auto;
-  /* 5% from the top, 15% from the bottom and centered */
-  width: 45%;
-  /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
 .close {
   float: right;
-  color: #000;
+  color: black;
   font-size: 35px;
   font-weight: bold;
 }
@@ -148,18 +85,7 @@ span.psw {
 
 /* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {
-    -webkit-transform: scale(0)
-  }
-
-  to {
-    -webkit-transform: scale(1)
-  }
 }
 
 @keyframes animatezoom {
@@ -172,85 +98,76 @@ span.psw {
   }
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-
-  .cancelbtn {
-    width: 100%;
-  }
+/* card styling*/
+.card {
+  width: 500px;
+  /*was 350px*/
+  border-radius: 2px;
+  margin: 75px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
-/*Style for input fields*/
-input[type=text], 
-[type=password], select, textarea {
-  width: 100%;
-  padding: 12px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-/*Style for submit button*/
+/* Style for input fields*/
 input[type=submit] {
-  background-color: #2C6BFF; 
+  background-color: #2C6BFF;
   color: white;
   padding: 12px 30px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 6px;
-  margin-left: 7px;
 }
 
 input[type=submit]:hover {
-  background-color: #5588FF; /*#5588FF = rgb(85, 136, 255)*/
+  background-color: #5588FF;
 }
 
-
-.col-50 {
-  padding: 5px;
-  max-width: 50%;
-  margin-top: 6px;
+input[type=text],
+[type=password] {
+  width: 93%;
+  margin: 10px 20px 10px 0px;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.col-100 {
-  padding: 5px;
-  margin-top: 6px;
-  margin-right: 20px;
+#date {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 10px;
+  color: grey;
+  margin: 10px 20px 10px 0px;
+  text-transform: uppercase;
 }
 
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#quantity {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 10px;
+  margin: 10px 20px 10px 0px;
+  color: grey;
 }
 
-
-.card {
-  width: 500px; /*was 350px*/
-  border-radius: 2px;
-  margin: 75px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+/* Website Title */
+.title {
+  font-size: 40px;
+  color: white;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 61%;
+  transform: translate(-50%, -50%);
 }
 
-.header {
-  height: 20px;
-  color: #fff;
-  padding: 10px 15px;
-  overflow: hidden;
+/* search bar */
+.searchwrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-.input-wrap {
-  padding: 5px;
-}
-
 
 .search {
   width: 100%;
@@ -260,7 +177,7 @@ input[type=submit]:hover {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #2C6BFF;
+  border: 5px solid #2C6BFF;
   border-right: none;
   padding: 5px;
   height: 20px;
@@ -269,14 +186,14 @@ input[type=submit]:hover {
   color: black;
 }
 
-.searchTerm:focus{
+.searchTerm:focus {
   color: black;
 }
 
 .searchButton {
   width: 40px;
-  height: 36px;
-  border: 1px solid #2C6BFF;
+  height: 40px;
+  border: 5px solid #2C6BFF;
   background: #2C6BFF;
   text-align: center;
   color: #fff;
@@ -285,104 +202,69 @@ input[type=submit]:hover {
   font-size: 20px;
 }
 
-#date {  
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px 10px;
-  color: grey;
-  text-transform: uppercase;
-  }
-
-#quantity{  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px 10px;
-  color: grey;}
-
-/*Resize the wrap to see the search bar change!*/
-.searchwrap{
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.title{
-	font-size: 40px;
-	color: white;
-  width: 50%;
-  position: absolute;
-  top: 25%;
-  left: 61%;
-  transform: translate(-50%, -50%);
-}
-
-
-#textpadding{padding: 6px;}
-
-
 /* CHECKBOX / RADIO BUTTON CSS CHECKBOX / RADIO BUTTON CSS  CHECKBOX / RADIO BUTTON CSS   CHECKBOX / RADIO BUTTON CSS   CHECKBOX / RADIO BUTTON CSS */
-
 
 /*hide default styling*/
 input[type=radio]:not(old),
-input[type=checkbox]:not(old){
-  width   : 28px;
-  margin  : 0;
-  padding : 0;
-  opacity : 0;
+input[type=checkbox]:not(old) {
+  width: 28px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 /*positioning and unchecked styling*/
-input[type=radio]:not(old) + label,
-input[type=checkbox ]:not(old) + label{
-  display      : inline-block;
-  margin-left  : -28px;
-  padding-left : 28px;
-  line-height  : 24px;
+input[type=radio]:not(old)+label,
+input[type=checkbox]:not(old)+label {
+  display: inline-block;
+  margin-left: -28px;
+  padding-left: 28px;
+  line-height: 24px;
 }
 
 /*positioning and checked styling*/
-input[type=radio]:not(old):checked + label{
-  background-position : 0 -48px;
+input[type=radio]:not(old):checked+label {
+  background-position: 0 -48px;
 }
-input[type=checkbox]:not(old):checked + label{
-  background-position : 0 -24px;
+
+input[type=checkbox]:not(old):checked+label {
+  background-position: 0 -24px;
 }
+
 /*first span, unchecked grahics*/
-input[type=checkbox]:not(old) + label > span,
-input[type=radio   ]:not(old) + label > span{
-  display          : inline-block;
-  width            : 0.875em;
-  height           : 0.875em;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
-  border           : 0.0625em solid rgb(192,192,192);
-  border-radius    : 0.25em;
-  background-color:  rgba(85, 136, 255,.125);
-  vertical-align   : bottom;
+input[type=checkbox]:not(old)+label>span,
+input[type=radio]:not(old)+label>span {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  border: 0.0625em solid rgb(192, 192, 192);
+  border-radius: 0.25em;
+  background-color: rgba(85, 136, 255, .125);
+  vertical-align: bottom;
 }
 
 /*bullet inside radio buttons*/
-input[type=radio]:not(old):checked + label > span > span{
-  display          : block;
-  width            : 0.5em;
-  height           : 0.5em;
-  margin           : 0.125em;
-  border           : 0.0625em solid#DC483C;
-  border-radius    : 0.125em;
-  background       :#DC483C;
+input[type=radio]:not(old):checked+label>span>span {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.125em;
+  border: 0.0625em solid#DC483C;
+  border-radius: 0.125em;
+  background: #DC483C;
 }
 
-/*tickmark inside checkboxes*/ /*#DC483C is a more subtle red that matches the hearts in the hands*/
-input[type=checkbox]:not(old):checked + label > span:before{
-  content     : '✓';
-  display     : block;
-  width       : 1em;
-  color       :#DC483C;
-  font-size   : 0.875em;
-  line-height : 1em;
-  text-align  : center;
-  text-shadow : 0 0 0.0714em #DC483C;
-  font-weight : bold;
+/*tickmark inside checkboxes*/
+/*#DC483C is a more subtle red that matches the hearts in the hands*/
+input[type=checkbox]:not(old):checked+label>span:before {
+  content: '✓';
+  display: block;
+  width: 1em;
+  color: #DC483C;
+  font-size: 0.875em;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 0 0 0.0714em #DC483C;
+  font-weight: bold;
 }
